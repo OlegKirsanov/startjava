@@ -2,7 +2,7 @@ public class Variable {
     public static void main(String[] args) {
         byte one = 1;
         short cpu = 4770;
-        int ram = 16;
+        int ram = 165;
         long codeProduct = 33110812;
         float freq = 3.43215f;
         double alpha = 5.4159265d;
