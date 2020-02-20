@@ -1,35 +1,35 @@
 public class ConditionalStatement {
     public static void main(String[] args) {
-        int age = 36;
-        String sex = "male";
-        float height = 1.83;
+        int age = 18;
+        String sex = "female";
+        double height = 1.83;
         String name = "Oleg";
-        char firstLetter = name.charAt(0);
 
         if(age > 20){
-            System.out.print("Adult");    
+            System.out.println("Adult");
         }
 
         if(sex == "male"){
-            System.out.print("A man");
-        } 
+            System.out.println("Man");
+        }
 
         if(sex != "male"){
-            System.out.print("A woman");
-        }
-        
-        if(height < 1.80){
-            System.out.print("Not too tall");
-        } else if{
-            System.out.print("Quite tall");
+            System.out.println("Woman");
         }
 
-        if(firstLetter.equals("M")) {
-            System.out.print("Name starts from 'M'");
-        } else if(firstLetter.equals("I")){
-            System.out.print("Name starts from 'I'");
+        if(height < 1.80){
+            System.out.println("Not too tall");
+        } else {
+            System.out.println("Quite tall");
+        }
+
+
+        if (name.substring(0, 1).equals("M")) {
+            System.out.println("The name starts from 'M'");
+        } else if (name.substring(0, 1).equals("I")){
+            System.out.println("The name starts from 'I'");
         } else{
-            System.out.print("Name starts neither from 'M' nor 'I'");
+            System.out.println("The name starts neither from 'M' nor 'I'");
         }
 
     }
