@@ -1,34 +1,25 @@
 import java.util.Scanner;
 
 public class GuessNumber {
-  public static void main(String[] args) {
-
+	public static void main(String[] args) {
     Scanner in = new Scanner(System.in);
+    boolean isCorrect = false;
+    int pcNum = 12;
 
-    System.out.println("Введите 1-е число: ");
-    int num1 = in.nextInt();
-
-    System.out.println("Введите вид операции (+, -, *, /, ^, %): ");
-    char oper = in.next().charAt(0);
-
-    System.out.println("Введите 2-е число: ");
-    int num2 = in.nextInt();
-
-    if (oper == '+') {
-      System.out.println("Ответ: " + (num1 + num2));
-    } else if (oper == '-') {
-      System.out.println("Ответ: " + (num1 - num2));
-    } else if (oper == '*') {
-      System.out.println("Ответ: " + (num1 * num2));
-    } else if (oper == '/') {
-      System.out.println("Ответ: " + (num1 / num2));
-    } else if (oper == '^') {
-      System.out.println("Ответ: " + (num1 ^ num2));
-    } else if (oper == '%') {
-      System.out.println("Ответ: " + (num1 % num2));
-    }
-
-  in.close();
-
-  }
+    while (isCorrect == false) {
+		System.out.println("Введите число: ");
+	    int userNum = in.nextInt();
+		if (userNum == pcNum) {
+	    	System.out.println("Вы угадали!");
+	    	isCorrect = true;
+	    } else if (userNum > pcNum) {
+	    	System.out.println(1"Введенное вами число больше того, что загадал компьютер");
+	    	isCorrect = false;
+	    } else if (userNum < pcNum) {
+	    	System.out.println("Введенное вами число меньше того, что загадал компьютер");	
+	    	isCorrect = false;
+	    }
+    }    
+  	in.close();
+  	}
 }
