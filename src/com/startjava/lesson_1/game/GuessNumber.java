@@ -1,3 +1,5 @@
+package com.startjava.lesson_1.game;
+
 import java.util.Scanner;
 
 public class GuessNumber {
@@ -13,13 +15,13 @@ public class GuessNumber {
 	    	System.out.println("Вы угадали!");
 	    	isCorrect = true;
 	    } else if (userNum > pcNum) {
-	    	System.out.println(1"Введенное вами число больше того, что загадал компьютер");
+	    	System.out.println("Введенное вами число больше того, что загадал компьютер");
 	    	isCorrect = false;
 	    } else if (userNum < pcNum) {
-	    	System.out.println("Введенное вами число меньше того, что загадал компьютер");	
+	    	System.out.println("Введенное вами число меньше того, что загадал компьютер");
 	    	isCorrect = false;
 	    }
-    }    
+    }
   	in.close();
   	}
 }
