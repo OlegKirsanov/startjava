@@ -1,24 +1,20 @@
 package com.startjava.lesson_2_3.calculator;
 
+import java.lang.Math;
+import java.util.Arrays;
+
 public class Calculator {
-    private int num1;
-    private int num2;
-    private char oper;
+    private String str;
 
-    public void setNum1(int num1) {
-        this.num1 = num1;
+    public void setEx(String str) {
+        this.str = str;
     }
 
-    public void setNum2(int num2) {
-        this.num2 = num2;
-    }
-
-    public void setOper(char oper) {
-        this.oper = oper;
-    }
-
-    public void getResult() {
-      int numDegree = num1;
+      public void getResult() {
+        String[] exp = str.split(" ");
+        int num1 = Integer.parseInt(exp[0]);
+        char oper = exp[1].charAt(0);
+        int num2 = Integer.parseInt(exp[2]);
       switch (oper) {
         case '+':
             System.out.println("Ответ: " + (num1 + num2));
@@ -30,17 +26,13 @@ public class Calculator {
             System.out.println("Ответ: " + (num1 * num2));
             break;
         case '/':
-            System.out.println("Ответ: " + (num1 / num2));
+            System.out.println("Ответ: " + Math.floorDiv(num1, num2));
             break;
         case '^':
-            for (int i = 1; i < num2; i++) {
-                numDegree = num1 * numDegree;
-            }
-            System.out.println("Ответ: " + (numDegree));
+            System.out.println("Ответ: " + Math.pow(num1, num2));
             break;
-        case '%':
-            System.out.println("Ответ: " + (num1 % num2));
-            break;
+          default:
+              System.out.println("Произошла ошибка!");
        }
     }
 }
